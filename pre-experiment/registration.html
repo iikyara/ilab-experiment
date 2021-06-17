@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <!-- キャッシュ対策用 -->
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <!-- キャッシュ対策用ここまで -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/registration.css">
+  <title>登録ページ | 市川研究室 被験者実験1</title>
+</head>
+<body>
+  <div class="container1">
+    <div id="area1-1" class="title">
+      <h1>登録ページ</h1>
+    </div>
+    <div id="area1-2" class="container2">
+      <div class="regist_area">
+        <div class="line"></div>
+        <form name="regist_form" class="regist_form info" action="registrate.php" method="post" onsubmit="return check()">
+          <ul>
+            <li>
+              学年：
+              <select name="grade" required>
+                <option value="1">1年生</option>
+                <option value="2">2年生</option>
+                <option value="3">3年生</option>
+                <option value="4">4年生</option>
+                <option value="5">5年生</option>
+                <option value="0">その他</option>
+              </select><br>
+            </li>
+            <li>
+              クラス：
+              <select name="class" required>
+                <option value="M">機械工学科</option>
+                <option value="E">電気工学科</option>
+                <option value="S">電子制御工学科</option>
+                <option value="I">情報工学科</option>
+                <option value="C">物質工学科</option>
+                <option value="X">その他</option>
+              </select>
+              <br>
+            </li>
+            <li>
+              出席番号：<input type="number" name="class_number" min="1" max="99" required><br>
+            </li>
+            <li>
+              姓：<input type="text" name="last_name" required><br>
+            </li>
+            <li>
+              名：<input type="text" name="first_name" required><br>
+            </li>
+            <li>
+              メールアドレス：<input type="email" name="mail_address" required><br>
+            </li>
+          </ul>
+          <input type="submit" name="submit_button" value="登録">
+        </form>
+        <div>
+          <form name="edit_form" class="regist_form info" action="edituserinfo.php" method="post">
+            登録情報を編集したい人はこちら↓
+            <ul>
+              <li>
+                学年：
+                <select name="grade" required>
+                  <option value="1">1年生</option>
+                  <option value="2">2年生</option>
+                  <option value="3">3年生</option>
+                  <option value="4">4年生</option>
+                  <option value="5">5年生</option>
+                  <option value="0">その他</option>
+                </select><br>
+              </li>
+              <li>
+                クラス：
+                <select name="class" required>
+                  <option value="M">機械工学科</option>
+                  <option value="E">電気工学科</option>
+                  <option value="S">電子制御工学科</option>
+                  <option value="I">情報工学科</option>
+                  <option value="C">物質工学科</option>
+                  <option value="X">その他</option>
+                </select>
+                <br>
+              </li>
+              <li>
+                出席番号：<input type="number" name="class_number" min="1" max="99" required><br>
+              </li>
+            <input type="submit" name="submit_button" value="編集を始める">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/registration.js"></script>
+</body>
+</html>

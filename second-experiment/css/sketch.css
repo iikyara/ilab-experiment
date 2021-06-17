@@ -1,0 +1,80 @@
+/*
+ * sketch.phpとfreemodelsketch.php（スケッチ実験ページ）のスタイルシート
+ */
+body{
+  overflow: hidden;
+}
+
+/*
+ * 3Dモデル表示部分の見た目
+ */
+.model-viewer{
+  margin: 0;
+}
+
+/*
+ * 3Dモデル表示部分に表示するメッセージの設定
+ */
+.viewer-message1{
+  position:absolute;
+  left: 10px;
+  top: 10px;
+  color: white;
+}
+.viewer-message2{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: white;
+}
+.viewer-message3{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  color: white;
+}
+
+/*
+ * タイマーの見た目
+ */
+.timer{
+  display: inline-block;
+  height: 20px;
+}
+.timer_button{
+  display: inline-block;
+  width: 100px;
+}
+
+/*
+ * 操作説明部分の見た目
+ */
+.description{
+  display: inline-block;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.description ul{
+  list-style-type: disc;
+  text-align: left;
+}
+.description ul ul{
+  list-style-type: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+}
+.finish_button{
+  display: inline-block;
+  width: 205px;
+}
+
+/*
+ * デバッグ情報表示用
+ */
+.forDebug{
+  line-height: 1.5em;
+}

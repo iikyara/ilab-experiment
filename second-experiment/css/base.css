@@ -1,0 +1,113 @@
+/*
+ * 全てのページで共通するスタイルシート
+ */
+html{
+  font-size: 100%;
+}
+
+/*
+ * フォントやページのデフォルト設定
+ */
+body{
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+  font-size: 1em;
+}
+
+/*
+ * タイトルの文字サイズ（ページ上部がタイトル）
+ */
+h1{
+  font-size: 1.4em;
+}
+
+/*
+ * ホームへのリンク
+ */
+.home{
+  text-align: right;
+}
+
+/*
+ * タイトルとページ本体を分けるコンテナ（FLEXを使用）
+ */
+.container1{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+}
+
+/*
+ * スケッチ実験ページで，3Dモデル表示部分と説明表示部分を分けるコンテナ（FLEXを使用）
+ */
+.container2{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+}
+
+/*
+ * 各ページのFLEXの設定
+ */
+#area1-1, #area1-2, #area2-1{
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+#area1-1{
+  max-height: 100px;
+  min-height: 100px;
+}
+#area2-1{
+  position: relative;
+}
+#area2-2{
+  display: inline-block;
+  width: 250px;
+  text-align: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+/*
+ * タイトルを真ん中に表示する設定
+ */
+.title{
+  position: relative;
+  text-align: left;
+}
+.title h1{
+  display: block;
+  position: absolute;
+  top: 50%;
+  padding-left: 30px;
+  transform: translateY(-50%) translateX(0);
+  -webkit-transform: translateY(-50%) translateX(0);
+}
+.title .home{
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  padding-right: 50px;
+  transform: translateY(-50%) translateX(0%);
+  -webkit-transform: translateY(-50%) translateX(0%);
+}
+
+/*
+ * タイトルと本文を分ける線を表す部品
+ * <div class="line"></div>とすることで使用できる
+ */
+.line{
+  height: 1px;
+  width: 98%;
+  border-top: solid 1px black;
+  margin: 0 auto;
+}
+
+.info_error{
+  color: red;
+}

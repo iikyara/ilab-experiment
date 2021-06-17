@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <!-- キャッシュ対策用 -->
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <!-- キャッシュ対策用ここまで -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/intro.css">
+  <title>初めに | 市川研究室 被験者実験1</title>
+</head>
+<body>
+  <div class="container1">
+    <div id="area1-1" class="title">
+      <h1>実験監督者の指示に従って以下の欄を埋めてください．</h1>
+    </div>
+    <div id="area1-2" class="container2">
+      <div class="intro_area">
+        <div class="line"></div>
+        <form name="intro_form" class="intro_form" action="question.php" method="post">
+          <ul>
+            <li>
+              指定された被験者IDを入力してください（例：5I18）<br>
+              <input type="text" name="subject_number" value=""><br>
+            </li>
+          </ul>
+          <input type="hidden" name="access_count" value="1">
+          <input type="submit" name="submit_button" value="ログイン">
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="./js/intro.js"></script>
+</body>
+</html>

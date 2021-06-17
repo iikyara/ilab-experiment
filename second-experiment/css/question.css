@@ -1,0 +1,171 @@
+/*
+ * question.phpで使用するスタイルシート
+ * IEやFireFoxだとバグあり？？？（修正したかも）
+ * [バグ報告]
+ * ・3Dモデルの表示部分がずれてアンケート部分に重なり，アンケートに回答できない
+ */
+body{
+  overflow: hidden;
+}
+
+/*
+ * 3Dモデル表示部分とアンケート部分を分けるコンテナ（FLEXを使用）
+ */
+.container2{
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+}
+
+/*
+ * 3Dモデル表示部分で2つの3Dモデルとスケッチの表示部分を分けるためのコンテナ（FLEXを使用）
+ */
+.container3{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+}
+
+/*
+ * 各コンテナのエリアごとの設定
+ */
+#area2-1, #area2-2, #area3-1, #area3-2, #area3-3{
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+#area2-1{
+  max-height: 50vh;
+  min-height: 50vh;
+}
+#area2-2{
+  position: relative;
+  min-width: 100vw;
+  max-width: 100vw;
+}
+#area3-1, #area3-2, #area3-3{
+  max-height: 100%;
+  min-height: 100%;
+}
+#area3-1{
+  background-color: red;
+}
+#area3-2{
+  background-color: green;
+}
+
+/*
+ * 3Dモデルの表示部分の設定
+ */
+.model-viewer{
+  position: absolute;
+  margin: 0;
+}
+.viewer-zone{
+  position: relative;
+  min-height: 50vh;
+  max-height: 50vh;
+}
+
+/*
+ * 3Dモデル表示部分に表示するメッセージの設定
+ */
+.viewer-message1{
+  position:absolute;
+  left: 10px;
+  top: 10px;
+  color: white;
+}
+.viewer-message2{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: white;
+}
+.viewer-message3{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  color: white;
+}
+
+/*
+ * アンケートの設定
+ */
+.question{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+.description{
+  display: inline-block;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.description ul{
+  list-style-type: disc;
+  text-align: left;
+}
+.description ul ul{
+  list-style-type: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+}
+.finish_button{
+  display: inline-block;
+  width: 205px;
+}
+
+/*
+ * いらないかも知れない
+ */
+.forDebug{
+  line-height: 1.5em;
+}
+
+.question{
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.question form{
+  margin: 20px;
+}
+/*
+ * 質問内容の表示設定
+ */
+.questionLabel{
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+/*
+ * アンケートの回答部分の周りを開ける
+ */
+.answerLabel{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/*
+ * スケッチの表示の設定
+ */
+.sketch-zone {
+    overflow: hidden;
+    position: relative;
+}
+.sketch-zone > img {
+    left: 50%;
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
